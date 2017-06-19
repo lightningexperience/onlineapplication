@@ -143,6 +143,7 @@ $().ready(function() {
 --------------------------------------------------------------------------------->
 </head>
 <body>
+	calculator
 <div id="calc_wrapper">
 <h1 class="calc_head">MORTGAGE PAYMENTS CALCULATOR</h1>
 <form method="POST" action="" id="paymentsform" name="paymentsform" class="cmxform" >
