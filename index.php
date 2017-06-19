@@ -249,8 +249,14 @@ $().ready(function() {
 		$loan_holder_name=$_POST["name"];
 		
 		$loan_holder_email=$_POST["email"];
+
 		
-		mysql_query("insert into paymentcalculator(loanamount,interestrate,months,ortizationschedule,name,email) values('$Current_loan_balance','$Annual_interest_rate','$Number_of_months_remaining','$_POST[amortization]','$loan_holder_name','$loan_holder_email')");
+		$result = pg_query($conn, “insert into paymentcalculator(loanamount,interestrate,months,ortizationschedule,name,email) values('$Current_loan_balance','$Annual_interest_rate','$Number_of_months_remaining','$_POST[amortization]','$loan_holder_name','$loan_holder_email')");
+var_dump($result);
+
+// Closing connection
+pg_close($dbconn);
+
 
 		/*=========================================================================
 
